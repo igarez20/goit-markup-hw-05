@@ -328,7 +328,6 @@ body {
 
 .work-thumb {
   position: relative;
-  z-index: -1;
 }
 
 .work-text {
@@ -628,6 +627,7 @@ body {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+
   border-left: 1px solid var(--portfolio-border-color);
   border-right: 1px solid var(--portfolio-border-color);
   border-bottom: 1px solid var(--portfolio-border-color);
@@ -652,4 +652,50 @@ body {
 
   font-size: 16px;
   line-height: 1.88;
+}
+
+/*--------------------МОДАЛЬНЕ ВІКНО--------------------  */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--primary-white-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+
+  fill: var(--logo-color);
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
