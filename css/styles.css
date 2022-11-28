@@ -23,6 +23,8 @@
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
   --primary-logo-color: #afb1b8;
+  --time-duration: 250ms;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------ЗАГАЛЬНІ СТИЛІ-------------------- */
@@ -138,6 +140,7 @@ body {
 
   font-weight: 500;
   line-height: 1.14;
+  transition: color var(--time-duration) var(--time-function);
 }
 
 .site-nav .link:hover,
@@ -178,6 +181,9 @@ body {
 
   font-weight: 500;
   line-height: 1.14;
+
+  transition: color var(--time-duration) var(--time-function),
+    fill var(--time-duration) var(--time-function);
 }
 .e-mail:hover,
 .phone:hover,
@@ -238,6 +244,9 @@ body {
   color: var(--primary-white-color);
 
   letter-spacing: 0.06em;
+
+  transition: color var(--time-duration) var(--time-function),
+    background-color var(--time-duration) var(--time-function);
 }
 
 .hero-button:hover,
