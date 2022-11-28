@@ -675,12 +675,18 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   width: 528px;
   height: 581px;
 
   background-color: var(--primary-white-color);
+
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform var(--time-duration) var(--time-function);
 }
 
 .close-btn {
@@ -698,4 +704,5 @@ body {
   background-color: var(--primary-white-color);
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
