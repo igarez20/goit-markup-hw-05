@@ -324,6 +324,27 @@ body {
   min-width: 100%;
 }
 
+.work-thumb {
+  position: relative;
+  z-index: -1;
+}
+
+.work-text {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /*--------------------НАША КОМАНДА--------------------  */
 .team {
   background-color: var(--team-bg-color);
@@ -401,6 +422,9 @@ body {
   border-radius: 50%;
   fill: var(--primary-logo-color);
   background-color: var(--primary-white-color);
+
+  transition: fill var(--time-duration) var(--time-function),
+    background-color var(--time-duration) var(--time-function);
 }
 
 .social-link:hover {
@@ -438,6 +462,8 @@ body {
   border-radius: 4px;
   fill: var(--primary-logo-color);
   background-color: transparent;
+
+  transition: fill var(--time-duration) var(--time-function);
 }
 
 .clients-link:hover {
@@ -469,18 +495,21 @@ body {
   font-style: normal;
 }
 
+.contacts-element:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .contacts-address {
   color: var(--primary-white-color);
   line-height: 1.71;
-}
 
-.contacts-element:not(:last-child) {
-  margin-bottom: 9px;
+  transition: color var(--time-duration) var(--time-function);
 }
 
 .contacts-item {
   color: var(--contacts-main-color);
   line-height: 1.71;
+  transition: color var(--time-duration) var(--time-function);
 }
 
 .contacts-address:hover,
@@ -525,6 +554,8 @@ body {
   border-radius: 50%;
   fill: var(--primary-white-color);
   background-color: #ffffff1a;
+
+  transition: background-color var(--time-duration) var(--time-function);
 }
 
 .socials-link:hover {
